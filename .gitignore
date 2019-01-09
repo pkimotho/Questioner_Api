@@ -4,4 +4,4 @@
 *.DS_Store
 /env
 .env
-*py_cache
+*pycache
