@@ -12,6 +12,9 @@ env:
   
 script:
   - pytest
+
+script: 
+  -py.test --cov-report term --cov=app/test/
   
-after success: 
-  - coveralls
+after success:
+  - codecov
