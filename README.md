@@ -42,4 +42,4 @@ This is a version one api of Questioner application. With this api, users can se
 
 ##### Author
 
-[](https://github.com/pkimotho)
+[Kimotho](https://github.com/pkimotho)
