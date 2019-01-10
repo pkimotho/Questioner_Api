@@ -13,8 +13,19 @@ class TestApiEndpoints(unittest.TestCase):
     def test_getmeetups(self):
         self.app = create_app(config_name="testing")
         self.client = self.app.test_client()
-        response = self.app.test_client().get('/api/v1/meetups')
-        self.assertEqual(response.status_code, 200)
+        resp = self.app.test_client().get('/api/v1/meetups')
+        self.assertEqual(resp.status_code, 200)
+
+    """def test_postmeetups(self):
+        self.app = create_app(config_name="testing")
+        self.client = self.app.test_client()
+        resp = self.app.test_client().post('api/v1/meetups', data=json.dumps({
+            "name": "Koof",
+            "topic": "Python Enthusiasts Meetup",
+            "location": "Nairobi",
+            "happeningOn": "2019-05-23"
+        }), headers={'content_type': 'application/json'})
+        self.assertEqual(resp.status_code, 201)"""
 
 
 if __name__ == '__main__':
