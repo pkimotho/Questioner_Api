@@ -16,5 +16,5 @@ script:
 script: 
   - py.test --cov-report term --cov=app/tests/
   
-after success:
+after_success:
   - codecov
