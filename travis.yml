@@ -10,5 +10,8 @@ install:
 env: 
   - APP_SETTINGS='development'
   
-  script:
+script:
   - pytest
+  
+after success: 
+  - coveralls
