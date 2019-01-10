@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/pkimotho/Questioner_Api.svg?branch=develop)](https://travis-ci.org/pkimotho/Questioner_Api) [![codecov](https://codecov.io/gh/pkimotho/Questioner_Api/branch/develop/graph/badge.svg)](https://codecov.io/gh/pkimotho/Questioner_Api) 
+[![Build Status](https://travis-ci.org/pkimotho/Questioner_Api.svg?branch=develop)](https://travis-ci.org/pkimotho/Questioner_Api) [![codecov](https://codecov.io/gh/pkimotho/Questioner_Api/branch/develop/graph/badge.svg)](https://codecov.io/gh/pkimotho/Questioner_Api) [![Maintainability](https://api.codeclimate.com/v1/badges/f95acbe6b0f2999d74b4/maintainability)](https://codeclimate.com/github/pkimotho/Questioner_Api/maintainability)
 
 # Questioner_Api
 This is a version one api of Questioner application. With this api, users can send requests to application and render data.
