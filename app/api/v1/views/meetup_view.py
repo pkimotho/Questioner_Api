@@ -35,5 +35,5 @@ class UpcomingMeetUps(Resource):
         resp = self.db.get_meetUps()
         return make_response(jsonify({
             "status": status,
-            "My Meetups": resp
+            "Upcoming Meetups": resp
         }), 200)
