@@ -5,20 +5,21 @@ question = []
 
 class questions():
     def __init__(self):
-        self.db = meetup
+        self.db = question
         self.id = len(question)
 
-    def save(self, location, topic, name, happeningOn):
+    def save(self, meetup, title, name, body, votes):
         data = {
             "id": self.id + 1,
             "createdOn": datetime.datetime.utcnow(),
             "createdBy": name,
-            "location": location,
-            "topic": topic,
-            "happeningOn": happeningOn
+            "meetup": meetup,
+            "title": title,
+            "body": body,
+            "votes": votes
         }
-        meetup.append(data)
-        return meetup
+        question.append(data)
+        return question
 
-    def get_meetUps(self):
+    def get_questions(self):
         return self.db
