@@ -1,8 +1,0 @@
-.vscode
-*.pyc
-.idea
-*.DS_Store
-/env
-.env
-*pycache
-app/__pycache__/__init__.cpython-36.pyc
