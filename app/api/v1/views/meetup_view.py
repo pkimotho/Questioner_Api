@@ -25,6 +25,11 @@ class MeetUps(Resource):
             "These are the Meetups": resp
         }), 201)
 
+
+class UpcomingMeetUps(Resource):
+    def __init__(self):
+        self.db = meetUps()
+
     def get(self):
         status = 200
         resp = self.db.get_meetUps()
