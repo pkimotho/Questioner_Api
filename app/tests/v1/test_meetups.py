@@ -18,14 +18,26 @@ class TestApiEndpoints(unittest.TestCase):
 
     """def test_postmeetups(self):
         self.app = create_app(config_name="testing")
-        self.client = self.app.test_client()
-        resp = self.app.test_client().post('api/v1/meetups', data=json.dumps({
-            "name": "Koof",
-            "topic": "Python Enthusiasts Meetup",
-            "location": "Nairobi",
-            "happeningOn": "2019-05-23"
-        }), headers={'content_type': 'application/json'})
+        self.client = self.app.test_client
+        resp = self.client().post('api/v1/meetups', data=json.dumps(dict(
+            name="Koof"
+        )), headers={'content_type': 'application/json'})
         self.assertEqual(resp.status_code, 201)"""
+
+    def test_getmeetupsbyid(self):
+        self.app = create_app(config_name="testing")
+        self.client = self.app.test_client
+        response = self.client().post('/api/v1/meetups/<int:meetupId>', data=json.dumps({
+
+            "name": "Koof",
+            "location": "Nairobi",
+            "topic": "Python",
+            "happeningOn": "2019-05-23"
+
+        }), headers={'content-type': 'application/json'})
+        item = self.client().get('api/v1/meetups/1')
+
+        self.assertEqual(item.status_code, 200)
 
 
 if __name__ == '__main__':
