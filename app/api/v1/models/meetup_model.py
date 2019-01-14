@@ -22,3 +22,8 @@ class meetUps():
 
     def get_meetUps(self):
         return self.db
+
+    def get_meetUpsById(self, id):
+        for m in meetup:
+            if id == m['id']:
+                return m
